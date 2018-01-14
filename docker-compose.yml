@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  domoticz:
+    container_name: motion
+    image: motion:latest
+    build:
+      context: .   
+    volumes:
+      - ./volumes/videos:/mnt/motion
+    ports:
+      - "8081:8081"
+    restart: always
